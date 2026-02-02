@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Our Memories 💕</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="center">
+
+<h2>Our Little Moments 🌹</h2>
+<p>Click all the hearts to unlock the next page</p>
+
+<div class="heart-row">
+  <span onclick="collect(this)">❤️</span>
+  <span onclick="collect(this)">❤️</span>
+  <span onclick="collect(this)">❤️</span>
+</div>
+
+<button id="nextBtn" disabled onclick="next()">Next ➝</button>
+
+<script>
+let count = 0;
+function collect(el) {
+  el.style.opacity = "0.3";
+  count++;
+  if (count === 3) {
+    document.getElementById("nextBtn").disabled = false;
+  }
+}
+function next() {
+  window.location.href = "quiz.html";
+}
+</script>
+
+</body>
+</html>

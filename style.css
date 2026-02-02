@@ -1,0 +1,68 @@
+body {
+  background: linear-gradient(#ff9a9e, #fad0c4);
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+.center {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transform: rotate(-45deg);
+  margin: 30px;
+  cursor: pointer;
+  animation: beat 1s infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.heart::before {
+  top: -50px;
+}
+
+.heart::after {
+  left: 50px;
+}
+
+.big {
+  transform: scale(1.5) rotate(-45deg);
+}
+
+@keyframes beat {
+  0%, 100% { transform: scale(1) rotate(-45deg); }
+  50% { transform: scale(1.2) rotate(-45deg); }
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: #ff4d6d;
+  color: white;
+  font-size: 18px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.letter {
+  max-width: 600px;
+  font-size: 18px;
+  line-height: 1.6;
+}

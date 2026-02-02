@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>How Well Do You Know Me? 💌</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="center">
+
+<h2>A Small Question 😘</h2>
+<p>Who do I love the most?</p>
+
+<button onclick="wrong()">Someone else</button>
+<button onclick="right()">Rimmi ❤️</button>
+
+<p id="msg"></p>
+
+<script>
+function wrong() {
+  document.getElementById("msg").innerText = "Nope 😜 Try again!";
+}
+function right() {
+  window.location.href = "forever.html";
+}
+</script>
+
+</body>
+</html>
